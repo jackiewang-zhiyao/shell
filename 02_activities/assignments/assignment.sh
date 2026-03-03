@@ -53,16 +53,17 @@ cp ../raw/user*.log ./user_logs/
 cp ../raw/event_log_*.log ./event_logs/
 
 # 7. For user privacy, remove all files containing IP addresses (files with "ipaddr" in the filename) from ./data/raw and ./data/processed/user_logs
-<<<<<<< HEAD
 rm ../raw/*ipaddr*
 rm ./user_logs/*ipaddr*
->>>>>>> ea20676d33161a6f4d0fcd3c4f7aa5360f0f4309
 
 # 8. Create a file named ./data/inventory.txt that lists all the files in the subfolders of ./data/processed
 ls -R . > ../inventory.txt
-git add assignment.sh
+git pull https://github.com/UofT-DSI/shell coworker-changes --no-rebase
 git status
-git commit -m "assignment 1"
+nano assignment.sh
+git add assignment.sh
+git commit -m "make changes"
+git status
 git push
 ###########################################
 

@@ -48,11 +48,12 @@ mkdir event_logs
 cp ../raw/server_log_*.log ./server_logs/
 
 # 6. Repeat the above step for user logs and event logs
-cp ../raw/user_log_*.log ./user_logs/
+cp ../raw/user*.log ./user_logs/
 cp ../raw/event_log_*.log ./event_logs/
 
 # 7. For user privacy, remove all files containing IP addresses (files with "ipaddr" in the filename) from ./data/raw and ./data/processed/user_logs
-rm ../raw/ipaddr_*.txt
+rm ../raw/*ipaddr*
+rm ./user_logs/*ipaddr*
 
 # 8. Create a file named ./data/inventory.txt that lists all the files in the subfolders of ./data/processed
 ls -R . > ../inventory.txt

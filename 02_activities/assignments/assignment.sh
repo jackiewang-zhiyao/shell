@@ -57,7 +57,10 @@ rm ./user_logs/*ipaddr*
 
 # 8. Create a file named ./data/inventory.txt that lists all the files in the subfolders of ./data/processed
 ls -R . > ../inventory.txt
-
+git add assignment.sh
+git status
+git commit -m "assignment 1"
+git push
 ###########################################
 
 echo "Project setup is complete!"
